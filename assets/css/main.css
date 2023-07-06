@@ -1,5 +1,3 @@
-main.css
-
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import "https://fonts.googleapis.com/css?family=Raleway:100,300,600";
@@ -1930,7 +1928,7 @@ main.css
 			width: 100%;
 
 		}
-
+		
 		.flex.flex-5 .box {
 			width: 100%;
 			text-align: center;
@@ -1984,7 +1982,7 @@ main.css
 
 			.flex.flex-4 .box {
 				width: 100%;
-
+	
 			}
 
 		}
@@ -2550,7 +2548,7 @@ main.css
 			table.alt tfoot {
 				border-top: 0;
 			}
-
+			
 			@media screen and (max-width: 960px) {
 		table td {
 		}
@@ -2772,8 +2770,8 @@ main.css
 			z-index: 1;
 
 		}
-
-
+		
+									
 
 
 		#header .logo {
@@ -2790,7 +2788,7 @@ main.css
 			font-size: 2em;
 			font-weight: bolder;
 		}
-
+		
 
 
 		#header a {
@@ -2804,14 +2802,14 @@ main.css
 			text-decoration: none;
 			font-size: 2em;
 			font-weight: bolder;
-
+			
 		}
 
 			#header a:hover {
 				color: #ffffff;
 				text-decoration: underline;
 			}
-
+			
 
 
 			#header a:last-child {
@@ -2826,9 +2824,9 @@ main.css
 				width: auto;
 																			transition: 0.5s ease-in-out;
 z-index: 1;
-
+				
 			}
-
+			
 
 
 				#header a.navPanelToggle .fa {
@@ -2843,7 +2841,7 @@ z-index: 1;
 				}
 
 
-
+				
 						@media screen and (max-width: 1280px) {
 
 					#header a.navPanelToggle {
@@ -2863,7 +2861,7 @@ z-index: 1;
 		}
 
 		}
-
+				
 
 				@media screen and (max-width: 980px) {
 
@@ -2880,7 +2878,7 @@ z-index: 1;
 			height: 44px;
 			line-height: 44px;
 		}
-
+		
 					#header a {
 			font-size: 1.5em;
 		}
@@ -2940,7 +2938,7 @@ z-index: 1;
 		}
 
 	}
-
+	
 		@media screen and (max-width: 980px) {
 
 		#nav {
@@ -2980,7 +2978,7 @@ z-index: 1;
 		overflow-y: visible;
 		overflow-x: visible;
 		transition: 0.5s ease-in-out;
-
+	
 		position: fixed;
 		right: 0;
 		top: 0;
@@ -2992,7 +2990,7 @@ z-index: 1;
 		padding: 0.5em 1.25em;
 		z-index: 10003;
 	}
-
+	
 															#navPanel a:not(.close):hover {
 				color: #bbb;
 				text-decoration: underline;
@@ -3008,7 +3006,7 @@ z-index: 1;
 			box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
-
+		
 
 
 		#navPanel a:not(.close) {
@@ -3073,16 +3071,21 @@ z-index: 1;
 
 /* Banner */
 
-#banner {
-	padding: 5em 0em 10em 0em;
-	background-image: url('../../images/banner.jpg');
-	background-size: contain;
-	background-position: top;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	text-align: center;
-	border-top: 0em solid #5385c1;
-}
+	#banner {
+    		padding: 5em 0 10em 0;
+    		background-image: url('../../images/banner.jpg');
+    		background-size: cover;
+    		background-position: center top;
+   		background-attachment: fixed;
+   		background-repeat: no-repeat;
+    		text-align: center;
+    		border-top: 0;
+    		border-color: #5385c1;
+    		border-width: 0 0 0.1em 0;
+    		margin-left: -50vw;
+    		margin-right: -50vw;
+
+	}
 
 		#banner h1 {
 			font-size: 5.0em;
@@ -3131,11 +3134,11 @@ z-index: 1;
 			#banner {
 				background-attachment: scroll;
 			}
-
+			
 						#banner {
 				padding: 4em 0em 8em 0em;
 			}
-
+			
 							#banner h1 {
 					font-size: 3em;
 				}
@@ -3191,7 +3194,7 @@ z-index: 1;
 			#banner {
 				padding: 3em 0em 6em 0em;
 			}
-
+			
 							#banner h1 {
 					font-size: 1.5em;
 					padding: 0em;
@@ -3268,4 +3271,3 @@ z-index: 1;
 		}
 
 	}
-
