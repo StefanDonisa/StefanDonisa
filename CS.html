@@ -53,10 +53,11 @@ import cmath
 import math
 import random
 import asyncio
+import pyodide
 
-async def install_matplotlib():
-    await micropip.install("matplotlib")
-asyncio.ensure_future(install_matplotlib())
+async def load_matplotlib():
+    await pyodide.loadPackage("matplotlib")
+asyncio.ensure_future(load_matplotlib())
 
 def arithmetic_calc():
     try:
