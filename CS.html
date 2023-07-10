@@ -55,7 +55,10 @@ import math
 import random
 import asyncio
 
-await micropip.install("matplotlib")
+async def install_matplotlib():
+    await micropip.install("matplotlib")
+asyncio.ensure_future(install_matplotlib())
+
 def arithmetic_calc():
     try:
         my_input = input("Enter your arithmetic sequence: ")
