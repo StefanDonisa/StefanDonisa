@@ -44,6 +44,14 @@
             Over the summer of 2023, I took a six week Computer Science internship under the guidance of Professor Ioan Raicu at the Illinois Institute of Technology. I learned how to code in Pyhton and HTML. Here are a few projects that I made throughout the summer. 
 						</p>
 <p><py-script>
+import asyncio
+
+async def main():
+    for i in range(3):
+        print(i)
+        await asyncio.sleep(1)
+
+asyncio.ensure_future(main())
 import sys
 from statistics import mean, median, mode
 import matplotlib.pyplot as plt
