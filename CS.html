@@ -45,6 +45,7 @@
 						</p>
 <p><py-script>
 import micropip
+import symbols
 import sys
 from statistics import mean, median, mode
 import matplotlib.pyplot as plt
@@ -54,9 +55,7 @@ import math
 import random
 import asyncio
 
-async def main():
-    await micropip.install("matplotlib")
-asyncio.ensure_future(main())
+await micropip.install("matplotlib")
 def arithmetic_calc():
     try:
         my_input = input("Enter your arithmetic sequence: ")
