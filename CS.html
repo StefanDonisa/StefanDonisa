@@ -44,12 +44,7 @@
             Over the summer of 2023, I took a six week Computer Science internship under the guidance of Professor Ioan Raicu at the Illinois Institute of Technology. I learned how to code in Pyhton and HTML. Here are a few projects that I made throughout the summer. 
 						</p>
 <p><py-script>
-import asyncio
-
-async def main():
-	await micropip.install("matplotlib")
-
-asyncio.ensure_future(main())
+import micropip
 import sys
 from statistics import mean, median, mode
 import matplotlib.pyplot as plt
@@ -58,6 +53,7 @@ import cmath
 import math
 import random
 
+micropip.install('matplotlib')
 def arithmetic_calc():
     try:
         my_input = input("Enter your arithmetic sequence: ")
