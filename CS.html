@@ -55,14 +55,18 @@ import random
 import asyncio
 import pyodide
 
-async def install_matplotlib():
-    await pyodide.runPythonAsync("""
-        import micropip
-        await micropip.install("matplotlib")
-    """)
 
-asyncio.ensure_future(install_matplotlib())
+async def install_plotly():
+    await pyodide.loadPackage("plotly")
 
+async def plot_example():
+    await install_plotly()
+    import plotly.graph_objects as go
+
+    fig = go.Figure(data=go.Scatter(x=[1, 2, 3], y=[4, 5, 6]))
+    fig.show()
+
+asyncio.ensure_future(plot_example())
 def arithmetic_calc():
     try:
         my_input = input("Enter your arithmetic sequence: ")
