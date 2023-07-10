@@ -56,7 +56,8 @@ import random
 import asyncio
 import pyodide
 
-
+micropip.install("matplotlib")
+	
 async def install_plotly():
     await pyodide.loadPackage("plotly")
 
