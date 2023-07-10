@@ -47,9 +47,7 @@
 import asyncio
 
 async def main():
-    for i in range(3):
-        print(i)
-        await asyncio.sleep(1)
+	await micropip.install("matplotlib")
 
 asyncio.ensure_future(main())
 import sys
@@ -60,7 +58,6 @@ import cmath
 import math
 import random
 
-await micropip.install("matplotlib")
 def arithmetic_calc():
     try:
         my_input = input("Enter your arithmetic sequence: ")
