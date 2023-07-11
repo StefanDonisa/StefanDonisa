@@ -57,6 +57,7 @@ import pyodide
 
 def arithmetic_calc():
     try:
+	print("Enter your arithmetic sequence: ")
         my_input = input("Enter your arithmetic sequence: ")
         result = eval(my_input)
         print("Result:", result)
@@ -70,8 +71,11 @@ def arithmetic_calc():
 def quadratic_calc():
     print("Quadratic Formula")
     try:
+	print("Enter the coefficient of x^2 (a): ")
         a = float(input("Enter the coefficient of x^2 (a): "))
-        b = float(input("Enter the coefficient of x (b): "))
+        print("Enter the coefficient of x (b): ")
+	b = float(input("Enter the coefficient of x (b): "))
+	print("Enter the constant term (c): ")
         c = float(input("Enter the constant term (c): "))
 
         discriminant = (b ** 2) - (4 * a * c)
@@ -95,6 +99,7 @@ def quadratic_calc():
 
 def statistics_calc():
     try:
+	print("Enter your numbers separated by commas: ")
         my_wallet = input("Enter your numbers separated by commas: ").split(",")
         my_wallet = [float(x) for x in my_wallet]
         my_wallet = sorted(my_wallet)
@@ -141,7 +146,9 @@ def is_prime_calc(number):
 
 def find_prime_calc():
     try:
+	print("Enter your min value: ")
         minimum = int(input("Enter your min value: "))
+	print("Enter your max value: ")
         maximum = int(input("Enter your max value: "))
         prime_numbers = [num for num in range(minimum, maximum+1) if is_prime(num)]
         print("Prime numbers from", minimum, "to", maximum, ":", prime_numbers)
@@ -151,6 +158,7 @@ def find_prime_calc():
 
 def factorial_calc():
     try:
+	print("Enter a number: ")
         number = int(input("Enter a number: "))
         result = 1
         for num in range(2, number+1):
@@ -161,6 +169,7 @@ def factorial_calc():
         factorial_calc()
 
 def number_statistics_calc():
+    print("What operation would you like to perform? (Prime?, FindPrime, Factorial): ")
     operation = input("What operation would you like to perform? (Prime?, FindPrime, Factorial): ")
     if operation == "Prime?":
         try:
@@ -183,9 +192,11 @@ def number_statistics_calc():
        
        
 def tempconv():
+    print("Do you want to convert Celcius or Farenheit: ")
     mydegrees = input("Do you want to convert Celcius or Farenheit: ")
     if mydegrees == "Celcius":
         try:
+	    print("Type the temperature in Celcius: ")
             mycel = float(input("Type the temperature in Celcius: "))
             mycel2 = (mycel*1.8)+32
             print("Your temperature in Farenheit is",mycel2)
@@ -194,6 +205,7 @@ def tempconv():
             tempconv()
     elif mydegrees == "Farenheit":
         try:
+	    print("Type the temperature in Farenheit: ")
             myfa = float(input("Type the temperature in Farenheit: "))
             myfa2 = (myfa-32)*(5.0/9.0)
             newmyfa2= round(myfa2, 1)
