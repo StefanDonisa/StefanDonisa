@@ -1585,7 +1585,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #ede8e9;
+		color: #fff;
 		font-family: "Raleway", Arial, Helvetica, sans-serif;
 		font-size: 13pt;
 		font-weight: 400;
@@ -1655,7 +1655,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #5385c1;
+		color: #000;
 		font-weight: 500;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
@@ -2775,7 +2775,7 @@
 
 
 		#header .logo {
-			color: yellow;
+			color: b424d1;
 			display: inline-block;
 			font-weight: 400;
 			height: inherit;
@@ -2798,7 +2798,7 @@
 			transition: color 0.2s ease-in-out;
 			display: inline-block;
 			padding: 0 0.75em;
-			color: yellow;
+			color: b424d1;
 			text-decoration: none;
 			font-size: 2em;
 			font-weight: bolder;
