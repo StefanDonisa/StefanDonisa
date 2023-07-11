@@ -47,8 +47,6 @@
 import micropip
 import sys
 from statistics import mean, median, mode
-import matplotlib
-import matplotlib.pyplot as plt
 import numpy as np
 import cmath
 import math
@@ -56,19 +54,7 @@ import random
 import asyncio
 import pyodide
 
-micropip.install("matplotlib")
-	
-async def install_plotly():
-    await pyodide.loadPackage("plotly")
 
-async def plot_example():
-    await install_plotly()
-    import plotly.graph_objects as go
-
-    fig = go.Figure(data=go.Scatter(x=[1, 2, 3], y=[4, 5, 6]))
-    fig.show()
-
-asyncio.ensure_future(plot_example())
 def arithmetic_calc():
     try:
         my_input = input("Enter your arithmetic sequence: ")
@@ -354,38 +340,6 @@ def find_calc():
         print("Invalid input")
         find_calc()
 
-def graphing_calc():
-    function = input("Choose a function to graph (exponential, linear, quadratic, cubic): ")
-    if function not in ["exponential", "linear", "quadratic", "cubic"]:
-        print("Error: Invalid function! Reenter your values.")
-        graphing_calc()
-        return
-
-    line = input("Enter the line to graph: ")
-    line = line.replace("^", "**")  # Replace "^" with "**"
-    line = line.replace(' ', '')  # Remove any spaces in the line
-
-    try:
-        x = symbols('x')
-        expr = eval(line)
-        func = lambdify(x, expr, modules=['numpy'])
-        x_vals = np.linspace(-100, 100, 1000)
-        y_vals = func(x_vals)
-
-        plt.plot(x_vals, y_vals, label=line)
-        plt.axhline(0, color='black', linewidth=.5)  # Horizontal line at y=0
-        plt.axvline(0, color='black', linewidth=.5)  # Vertical line at x=0
-        plt.xlim(-100, 100)  # Set x-axis limits
-        plt.ylim(-100, 100)  # Set y-axis limits
-        plt.xlabel('x')
-        plt.ylabel('y')
-        plt.title(f'{function.capitalize()} Function')
-        plt.legend()
-        plt.show()
-    except:
-        print("Error: Invalid input! Reenter your values.")
-        graphing_calc()
-
 def exponentiation_calc():
     try:
         base = float(input("Enter the base number: "))
@@ -442,7 +396,7 @@ def random_guessing_game():
 
 def grandissimo():
     while True:
-        user_input = input("What do you want the calculator to do? Choose an option: arithmetic, quadratic formula, statistics, number statistics, conversion, find command, graphing, exponentiation, square root, stop running\n")
+        user_input = input("What do you want the calculator to do? Choose an option: arithmetic, quadratic formula, statistics, number statistics, conversion, find command, exponentiation, square root, stop running\n")
         if user_input == "arithmetic":
             arithmetic_calc()
         elif user_input == "quadratic formula":
@@ -455,8 +409,6 @@ def grandissimo():
             conversioncalc()
         elif user_input == "find command":
             find_calc()
-        elif user_input == "graphing":
-            graphing_calc()
         elif user_input == "exponentiation":
             exponentiation_calc()
         elif user_input == "square root":
