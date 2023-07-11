@@ -238,6 +238,7 @@ def convert_distancecalc(value, from_unit, to_unit):
         print("Invalid unit.")
 
 def distance_conversion():
+    print("What do you want to convert? (Kilometers, Inches, Feet, Meters, Miles, Centimeters, Millimeters): ")
     my_distance = input("What do you want to convert? (Kilometers, Inches, Feet, Meters, Miles, Centimeters, Millimeters): ")
     if my_distance in ["Kilometers", "Inches", "Feet", "Meters", "Miles", "Centimeters", "Millimeters"]:
         try:
@@ -272,6 +273,7 @@ def convert_volumecalc(value, from_unit, to_unit):
     else:
         print("Invalid unit.")
 def volume_conversion():
+    print("What do you want to convert? (Milliliters, Liters, Cubic Inches, Cubic Feet, Cubic Meters, Gallons, Quarts, Pints, Fluid Ounces): ")
     my_volume = input("What do you want to convert? (Milliliters, Liters, Cubic Inches, Cubic Feet, Cubic Meters, Gallons, Quarts, Pints, Fluid Ounces): ")
     if my_volume in ["Milliliters", "Liters", "Cubic Inches", "Cubic Feet", "Cubic Meters", "Gallons", "Quarts", "Pints", "Fluid Ounces"]:
         try:
@@ -303,6 +305,7 @@ def convert_weightcalc(value, from_unit, to_unit):
         print("Invalid unit.")
 
 def weight_conversion():
+    print("What do you want to convert? (Milligrams, Grams, Kilograms, Ounces, Pounds, Tons): ")
     my_weight = input("What do you want to convert? (Milligrams, Grams, Kilograms, Ounces, Pounds, Tons): ")
     if my_weight in ["Milligrams", "Grams", "Kilograms", "Ounces", "Pounds", "Tons"]:
         try:
@@ -316,6 +319,7 @@ def weight_conversion():
         print("Invalid unit. Try Again.")
         weight_conversion()
 def conversioncalc():
+    print("What operation would you like to perform? (Temperature, Distance, Volume, Weight)")
     the_input = input("What operation would you like to perform? (Temperature, Distance, Volume, Weight)")
     if the_input == "Temperature":
         tempconv()
@@ -338,6 +342,7 @@ def conversioncalc():
    
 def find_calc():
     try:
+	print("Enter your numbers separated by commas: ")
         my_wallet = input("Enter your numbers separated by commas: ").split(",")
         my_wallet = [float(x) for x in my_wallet]
         my_wallet = sorted(my_wallet)
@@ -354,7 +359,9 @@ def find_calc():
 
 def exponentiation_calc():
     try:
+	print("Enter the base number: ")
         base = float(input("Enter the base number: "))
+	print("Enter the exponent value: ")
         exponent = float(input("Enter the exponent value: "))
         result = base ** exponent
         print("Result:", result)
@@ -363,6 +370,7 @@ def exponentiation_calc():
         exponentiation_calc()
 def square_root_calc():
     try:
+	print("Enter the number: ")
         number = float(input("Enter the number: "))
         result = math.sqrt(number)
         print("Result:", result)
@@ -370,6 +378,7 @@ def square_root_calc():
         print("Invalid input")
         square_root_calc()
 def random_guessing_game():
+    print("Choose the game mode (easy, neutral, hard): ")
     mode = input("Choose the game mode (easy, neutral, hard): ")
     if mode not in ["easy", "neutral", "hard"]:
         print("Invalid game mode! Please choose one of the available modes.")
@@ -388,6 +397,7 @@ def random_guessing_game():
 
     print(f"You are on {mode.upper()} mode. You have {max_guesses} guesses to guess an integer.")
     for i in range(1, max_guesses + 1):
+	print("Enter your guess: ")
         guess = int(input("Enter your guess: "))
         if guess == random_number:
             print("Congratulations! You guessed correctly.")
