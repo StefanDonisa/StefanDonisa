@@ -396,7 +396,8 @@ def random_guessing_game():
 
 def grandissimo():
     while True:
-        user_input = input("What do you want the calculator to do? Choose an option: arithmetic, quadratic formula, statistics, number statistics, conversion, find command, exponentiation, square root, stop running\n")
+	print("What do you want the calculator to do? Choose an option: arithmetic, quadratic formula, statistics, number statistics, conversion, find command, exponentiation, square root, stop running")
+        user_input = input("What do you want the calculator to do? Choose an option: arithmetic, quadratic formula, statistics, number statistics, conversion, find command, exponentiation, square root, stop running")
         if user_input == "arithmetic":
             arithmetic_calc()
         elif user_input == "quadratic formula":
